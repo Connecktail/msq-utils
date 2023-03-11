@@ -14,9 +14,9 @@ int init_message_queue()
     return msgget(key, msgflg);
 }
 
-void receive_message(msq_msg_t *message, long mtype)
+ssize_t receive_message(msq_msg_t *message, long mtype, int no_wait)
 {
-    msgrcv(msqid, message, sizeof(message_t), mtype, 0);
+    return msgrcv(msqid, message, sizeof(message_t), mtype, no_wait ? IPC_NOWAIT : 0);
 }
 
 void send_message(msq_msg_t message)
