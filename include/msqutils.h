@@ -1,6 +1,7 @@
 #ifndef MSQUTILS_H
 #define MSQUTILS_H
 
+#include <sys/types.h>
 #include "message.h"
 
 #define MSQ_ID 1234
