@@ -97,7 +97,7 @@ int init_message_queue()
 - Receive a message from the message queue :
 
 ```c
-void receive_message(msq_msg_t *message, long mtype)
+ssize_t receive_message(msq_msg_t *message, long mtype, int no_wait)
 ```
 
 - Send a message to the message queue :

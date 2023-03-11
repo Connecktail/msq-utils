@@ -18,8 +18,10 @@ int init_message_queue();
  * @brief Receive a message from the message queue
  * @param message the buffer where the message will be sent
  * @param mtype The type of the message to receive
+ * @param no_wait If the message queue is empty, wait for a message or return immediately
+ * @return The size of the message received
  */
-void receive_message(msq_msg_t *message, long mtype);
+ssize_t receive_message(msq_msg_t *message, long mtype, int no_wait);
 
 /**
  * @brief Send a message to the message queue
