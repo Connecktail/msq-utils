@@ -72,6 +72,7 @@ An union has been used to be able to use the same type "message_t" in the global
 typedef union
 {
     scanner_message_t scanner;
+    buzzer_message_t buzzer;
     led_message_t led;
 } message_t;
 ```
@@ -92,6 +93,15 @@ typedef struct
 {
     ip_address_t ip_address;
 } led_message_t;
+```
+
+**Struct buzzer_message_t**
+
+```c
+typedef struct
+{
+    ip_address_t ip_address;
+} buzzer_message_t;
 ```
 
 ## Functions :

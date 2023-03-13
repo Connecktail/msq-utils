@@ -16,9 +16,15 @@ typedef struct
     ip_address_t ip_address;
 } led_message_t;
 
+typedef struct
+{
+    ip_address_t ip_address;
+} buzzer_message_t;
+
 typedef union
 {
     scanner_message_t scanner;
+    buzzer_message_t buzzer;
     led_message_t led;
 } message_t;
 
