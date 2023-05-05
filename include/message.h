@@ -3,7 +3,18 @@
 
 #include <db-utils/types.h>
 
+#define MAX_LENGTH_MESSAGE 600
 #define MAX_LENGTH_BARCODE 13
+
+typedef struct 
+{
+    long long int id_order;
+    int step;
+    int total_step;
+    int bottle;
+    int total_bottle;
+    char message[MAX_LENGTH_MESSAGE];
+} status_message_t;
 
 typedef struct
 {
@@ -23,6 +34,7 @@ typedef struct
 
 typedef union
 {
+    status_message_t order_status;
     scanner_message_t scanner;
     buzzer_message_t buzzer;
     led_message_t led;
