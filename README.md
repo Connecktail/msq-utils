@@ -71,10 +71,25 @@ An union has been used to be able to use the same type "message_t" in the global
 ```c
 typedef union
 {
+    status_message_t order_status;
     scanner_message_t scanner;
     buzzer_message_t buzzer;
     led_message_t led;
 } message_t;
+```
+
+**Struct status_message_t**
+
+```c
+typedef struct 
+{
+    id_db_t id_order;
+    int step;
+    int total_step;
+    int bottle;
+    int total_bottle;
+    char *message;
+} status_message_t;
 ```
 
 **Struct scanner_message_t**
