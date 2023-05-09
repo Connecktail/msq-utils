@@ -9,6 +9,8 @@
 typedef struct 
 {
     long long int id_order;
+    int cocktail;
+    int total_cocktail;
     int step;
     int total_step;
     int bottle;
