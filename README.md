@@ -83,12 +83,14 @@ typedef union
 ```c
 typedef struct 
 {
-    id_db_t id_order;
+    long long int id_order;
+    int cocktail;
+    int total_cocktail;
     int step;
     int total_step;
     int bottle;
     int total_bottle;
-    char *message;
+    char message[MAX_LENGTH_MESSAGE];
 } status_message_t;
 ```
 
